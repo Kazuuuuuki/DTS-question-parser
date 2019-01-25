@@ -17,7 +17,7 @@
 例：
 
 ```
-./prove.sh sentences/example1.ccg
+./parsing.sh sentences/example1.ccg
 ```
 
 CCGの木と論理式は、`results/example1.html` で見ることができる。
