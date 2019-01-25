@@ -1,0 +1,26 @@
+# Semantic Lexicon for comparatives
+
+# Proper Noun
+- category: NP
+  semantics: \E. E
+
+# Common Noun
+- category: N
+  semantics: \E x. E(x)
+
+# Intransitive Verb
+- category: S\NP
+  semantics: \E x. E(x)
+
+# Transitive Verb
+- category: (S\NP)/NP
+  semantics: \E x y. E(x,y)
+
+# Determiner
+- category: (S/(S\NP))/N
+  semantics: \E F G. all x.(F(x) -> G(x))
+  surf: every
+
+- category: (S/(S\NP))/N
+  semantics: \E F G. exists x.(F(x) & G(x))
+  surf: some
