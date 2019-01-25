@@ -1,5 +1,15 @@
 # Semantic Lexicon for question
 
+# auxiliary
+- category: (S\NP)/(S\NP)
+  semantics: \E P. P
+  surf: do
+
+# Negation
+- category: (S\NP)/(S\NP)
+  semantics: \E P x. -P(x)
+  surf: not
+
 # Proper Noun
 - category: S/(S\NP)
   semantics: \E P. P(E)
@@ -27,3 +37,7 @@
 - category: (S/(S\NP))/N
   semantics: \E F G. exists x.(F(x) & G(x))
   surf: some
+
+- category: (S/(S\NP))/N
+  semantics: \E F G. - exists x.(F(x) & G(x))
+  surf: "no"
