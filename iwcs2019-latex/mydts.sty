@@ -1,0 +1,68 @@
+
+%%%%%DTT macro%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\FormPi}{\mbox{\scriptsize$(\Pi F)$}}
+\newcommand{\FormSigma}{\mbox{\scriptsize$(\Sigma F)$}}
+\newcommand{\FormNeg}{\mbox{\scriptsize$(\neg F)$}}
+\newcommand{\ElimPi}{\mbox{\scriptsize$(\Pi E)$}}
+\newcommand{\ElimSigma}{\mbox{\scriptsize$(\Sigma E)$}}
+\newcommand{\IntroPi}{\mbox{\scriptsize$(\Pi I)$}}
+\newcommand{\IntroSigma}{\mbox{\scriptsize$(\Sigma I)$}}
+\newcommand{\discharge}[1]{\mbox{\scriptsize\ensuremath{#1}}}
+
+%%%%%DTS macro%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\asp}[1]{\ensuremath{ \mbox{{\small \mbox{$@$}}$_{#1}$}}}
+\newcommand{\pred}[1]{\ensuremath{\normalfont \textbf{#1}}}
+\newcommand{\type}{\ensuremath{\normalfont \textbf{type}}}
+\newcommand{\Entity}{\ensuremath{\pred{entity}}}
+
+\newcommand{\dSigma}[3][x]{\ensuremath{%
+  \left[\kern-0.1em
+  \begin{array}{l}
+  #1:#2 \\
+  #3
+  \end{array}
+  \kern-0.1em\right]
+}}
+
+\newcommand{\dConj}[3][x]{\ensuremath{%
+    \left[\kern-0.3em
+      \begin{array}{l}
+        #2 \\
+        #3
+      \end{array}
+      \kern-0.3em
+      \right]
+}}
+\newcommand{\dPi}[3][x]{\ensuremath{%
+    \left(
+    #1{:\,}#2
+    \right) \to #3
+}}
+\newcommand{\dImp}[3][x]{\ensuremath{%
+    #2 \to #3
+}}
+
+\newcommand{\dExi}[3][x]{\ensuremath{%
+    \left(
+    #1{:\,}#2
+    \right) \bigoplus  #3
+}}
+
+\newcommand{\dexi}[2]{\ensuremath{%
+    #1 \biguplus #2
+}}
+
+\newcommand{\dOr}[2]{\ensuremath{%
+    #1 \biguplus #2
+}}
+
+
+%%%%%Others for SR%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\sem}[1]{[\![ #1 ]\!]}
+\newcommand{\Exp}[1]{\ensuremath{\mathit{#1}}}
+\newcommand{\LF}[1]{\ensuremath{\mathsf{ #1 }}}
+\newcommand{\entail}[2]{\begin{tabular}{l} #1 \\ \hline #2 \end{tabular}\smallskip}
+\newcommand{\lbracket}[1]{\ensuremath{\!\left(#1\right)}}
+\newcommand{\onepred}[2]{\ensuremath{\mathbf{#1}\left(#2\right)}}

@@ -1,0 +1,37 @@
+
+%%%%% 証明木用 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\vs}[1]{\vrule height #1 width 0pt}
+\newcommand{\topbox}[2]{\vbox{\hbox{$\displaystyle #1$}\hbox{\vs{#2}}}}
+\newcommand{\botbox}[2]{\vbox{\hbox{\vs{#1}}\hbox{$\displaystyle #2$}}}
+\newcommand{\mmfrac}[2]{\frac{\topbox{#1}{0pt}}{\botbox{0.5pt}{#2}}} % 数式用
+\newcommand{\nnd}[4][]{
+  \ensuremath{
+    {\scriptstyle #1}\mmfrac{#3}{#2}{\scriptstyle #4}
+    }
+  }
+
+
+%%%%% 解釈関数、内包と外延 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\average}[1]{\ensuremath{\langle#1\rangle} }
+\newcommand{\jumpmath}[1]{\ensuremath{[\![#1]\!]} }
+\newcommand{\jump}[1]{[\![#1]\!]}
+
+\newcommand{\up}{\ensuremath{\hat{\textcolor{white}{x}}}}
+\newcommand{\down}{\ensuremath{\check{\textcolor{white}{x}}}}
+\newcommand{\jumpcond}[1]{\ensuremath{{\jump{#1}}^{cond}}}
+\newcommand{\jumpdrs}[1]{\ensuremath{{\jump{#1}}^{DRS}}}
+\newcommand{\gen}[2]{\textit{Gen(}\textrm{#1}\textit{) = #2}}
+\newcommand{\um}[2]{\textsf{#1}_{\textsf{M_{\textsf{#2}}}}}
+\newcommand{\umd}[1]{\textsf{#1}_{\textsf{M$'$}}}
+
+
+%%%%% 汎用性 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\kakko}[1]{\ensuremath{\langle #1 \rangle}}
+\newcommand{\maru}{\textbf{・}}
+\newcommand{\tyon}[1]{``#1"}
+
+
+  

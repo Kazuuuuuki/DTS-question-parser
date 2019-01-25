@@ -1,0 +1,218 @@
+\documentclass[a4paper,11pt, leqno]{article}
+\usepackage{nccmath} 
+\usepackage{comment}
+\usepackage{graphicx}  %%% for including graphics
+\usepackage{url}       %%% for including URLs
+\usepackage{times}
+\usepackage{natbib}
+% 普段使うもの（必要に応じて追加）
+\usepackage{proof}
+\usepackage{ebproof}
+\usepackage{color}
+\usepackage{myccg}
+\usepackage{mydts}
+\usepackage{mathtools,amsmath}
+\usepackage{mymacro}
+\title{Inquisitive meaning with DTS(\textcolor{red}{need reconsideration})}
+\date{}
+
+\author{Kazuki Watanabe, Koji Mineshima, Daisuke Bekki\\
+       University of Tokyo\\
+       Ochanomizu University\\
+       \texttt{watanabe-kazuki163@g.ecc.u-tokyo.ac.jp}\\
+       \texttt{mineshima.koji@ocha.ac.jp}\\
+       \texttt{bekki@is.ocha.ac.jp}\\
+}
+\usepackage{cleveref}
+\crefname{section}{section}{§}
+\Crefname{section}{section}{§}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\section{Introduction}
+A number of studies have analyzed interrogative sentences. Recently, Inquisitive semantics (\citet{ciardelli2012inquisitive}) was proposed and some studies (\citet{Ciardelli2017, champollion2015some}) based on this framework have been reported. Inquisitive semantics analyzes declarative sentences and interrogative sentences in the same way. However, this framework is based on model theory. Therefore, it is not trivial that how to apply this framework to computational semantics.  On the other hand, there are some frameworks (\citet{ranta1994type, Ginzburg2005}) based on dependent type theory (\citet{martin1984intuitionistic}). These frameworks can deal with not only declarative sentences but also some interrogative sentences. However, these frameworks don't meet the principle of compositionality and  use some meta rules just for describing the relation between questions and answers. we will explain only inquisitive semantics in more detailed.\par
+
+In this study, we show how to express the semantic representations of  interrogative sentences in the Dependent Type Semantics (DTS; \citet{BekkiMineshima2016}) and we modify some semantic representations of declarative sentences. DTS is based on dependent type theory and provides the unified analysis of semantic representations of declarative sentences, presupposition and anaphora. In this paper, we propose the extension of DTS to express meanings of interrogative sentences, which also meets the principle of compositionality and uses no meta rules.\par
+
+The framework that we propose in this paper is different from these points below.
+\begin{enumerate}
+  \item The semantics is based on proof theory, while inquisitive semantics is based on model theory.
+  \item The compositionality principle is achieved without meta rules, while other frameworks using dependent type theory are not.
+\end{enumerate}
+\par
+
+In \Cref{section:background}, we will explain some features of inquisitive semantics which are related to our study. In \Cref{section:DTS} we explain the semantics of DTS. The main part of this paper is \Cref{section:inquisitive_meaning_with_dts}. In this section, we propose original semantic representations for some interrogative sentences with DTS and we succeed at extending DTS. Moreover, this extension retains the structure of presupposition and anaphora in DTS.  
+\section{Inquisitive semantics\label{section:background}}
+Inquisitive semantics (\citet{ciardelli2012inquisitive}) is based on model theory and uses the first-order system as InqB. InqB is a logic and equivalent to intuitionistic logic, which enables InqB to distinguish meanings of declarative sentences from one of interrogative sentences. Propositions of declarative sentences must be negated twice as the following diagram.
+\begin{align}
+\mbox{John is tall or short.} \\
+\lnot\lnot (\pred{tall}(j)\lor\pred{short}(j)) 
+\end{align}
+On the other hand, propositions of interrogative sentences  are expressed in the following way. For instance, (4) is a semantic representation of (3) when (3) is considered as a alternative question, not as a polar question.
+\begin{align}
+\mbox{Is John tall or short?} \\
+\pred{tall}(j)\lor\pred{short}(j)
+\end{align}
+Double negation is a key to distinguish declarative sentences from interrogative sentences in InqB, but double negation causes problems in the DTS (\citet{BekkiMineshima2016}) when we handle presupposition and anaphora. we will discuss this problem in \Cref{section:DTS}, \Cref{section:inquisitive_meaning_with_dts}.\par
+
+Another feature of inquisitive semantics is entailment. Inquisitive semantics defines entailment for not only declarative sentences but also interrogative sentences in the same way. In inquisitive semantics, some interrogative sentences entail another interrogative ones and some declarative sentences do another interrogative ones. Some examples (\citet{ciardelli2012inquisitive}) are shown as follows.
+\begin{align}
+\mbox{What is the number of planets?} \Rightarrow \mbox{Is the number of planets even?} \\
+\mbox{John is tall.} \Rightarrow  \mbox{Is John tall?}
+\end{align}
+\begin{comment}
+Inqusitive semanticsのcompositionalな拡張と前提を扱った拡張について触れるべきか悩んでいる。model theoryではなく依存型でやったということで十分面白いと判断されるなら不要か??
+\par
+Some extensions of inquisitive semantics have been published. Compositional Inquisitive Semantics(\citet{Ciardelli2017}) meets the principle of compositionality and the difference between alternative semantics and inquisitive semantics is explained in this study. 
+\end{comment}
+
+
+\section{DTS\label{section:DTS}}
+DTS (\citet{BekkiMineshima2016}) is a discourse semantic framework based on dependent type theory (\citet{martin1984intuitionistic}). The following three type constructors are proposed in these studies (\citet{BekkiMineshima2016}, \citet{ranta1994type}) .
+\begin{align}
+\Pi\mbox{-Type: }\dPi[x]{A}{B(x)}\\
+\Sigma\mbox{-Type: }\dSigma[x]{A}{B(x)}\\
+\biguplus\mbox{-Type: }\dOr{A}{B}
+\end{align}
+$\Pi\mbox{-Type}$ can be considered as a generalized function type and  $\Sigma\mbox{-Type}$ can be also considered as a generalized product type. In dependent type theory, these two types depend on terms and this property makes a difference from simple type theory. $\biguplus\mbox{-Type}$ can be considered as a generalized disjoint union type. $\biguplus\mbox{-Type}$ don't depend on term, unlike $\Pi\mbox{-Type}$ and $\Sigma\mbox{-Type}$. Figure 1 shows some inference rules which we must use to express the inquisitive meaning in DTS.
+\begin{figure}
+\scalebox{0.8}{
+  \begin{prooftree}
+    \hypo{ A: type_i  }
+    \infer0[k]{ x : A }\ellipsis{}{B: type_j}
+    \infer2[$(\Pi F)$, k]{ (x: A) \rightarrow B : type_{max(i, j)} }
+  \end{prooftree}
+
+   \begin{prooftree}
+    \hypo{ A: type_i  }
+    \infer0[k]{ x : A }\ellipsis{}{M: B}
+    \infer2[$(\Pi I)$, k]{ \lambda x. M : ( x: A) \rightarrow B }
+  \end{prooftree}
+  
+  \begin{prooftree}
+    \hypo{ M: (x: A) \rightarrow B }
+    \hypo{ N: A }
+    \infer2[$(\Pi E)$]{MN: B[N/x] }
+  \end{prooftree}
+  }
+
+\bigskip
+ \scalebox{0.8}{
+ 
+  \begin{prooftree}
+    \hypo{ A: type_i  }
+    \infer0[k]{ x : A }\ellipsis{}{B: type_j}
+    \infer2[$(\Sigma F)$, k]{ $\dSigma[x]{A}{B}$ : type_{max(i, j)} }
+  \end{prooftree}
+  
+  \begin{prooftree}
+    \hypo{ M: A  }
+    \hypo{ N: B[M/x]  }
+    \infer2[$(\Sigma I)$]{(M, N): $\dSigma[x]{A}{B}$}
+  \end{prooftree}
+  
+  \begin{prooftree}
+    \hypo{ M: $\dSigma[x]{A}{B}$ }
+    \infer1[$(\Sigma E)$]{\pi_1(M): A }
+  \end{prooftree}
+  
+   \begin{prooftree}
+    \hypo{ M: $\dSigma[x]{A}{B}$ }
+    \infer1[$(\Sigma E)$]{\pi_2(M): B[\pi_1(M)/x] }
+  \end{prooftree}
+  
+  }
+  
+  \bigskip
+  
+ \scalebox{0.8}{
+ \begin{prooftree}
+    \hypo{ A: type_i  }
+    \hypo{ A: type_j  }
+    \infer2[$(\biguplus F)$]{ \dOr{A}{B} : type_{max(i, j)} }
+  \end{prooftree}
+ 
+ \begin{prooftree}
+    \hypo{ M: A  }
+    \infer1[$(\biguplus I)$]{ \iota_1(M) : \dOr{A}{B} }
+  \end{prooftree}
+  
+  \begin{prooftree}
+    \hypo{ M: A  }
+    \infer1[$(\biguplus I)$]{ \iota_2(M) : \dOr{A}{B} }
+  \end{prooftree}
+  }
+  \bigskip
+  
+ \scalebox{0.8}{
+  \begin{prooftree}
+    \hypo{ L: \dOr{A}{B}  }
+    \hypo{ C: (\dOr{A}{B}) \rightarrow type_i}
+    \infer0[k]{x: A}\ellipsis{}{M: C(\iota_1(x))}
+    \infer0[k]{x: B}\ellipsis{}{N: C(\iota_2(x))}
+    \infer4[$(\biguplus E), k$]{ case\ L\ of\ (\lambda x. M; \lambda x. N) : C(L) }
+  \end{prooftree}
+ }
+\caption{Inference rules (\textcolor{red}{fix layout})}
+    \label{fig:inference rules}
+\end{figure}
+\par
+While other frameworks (\citet{ranta1994type,Ginzburg2005}) based on dependent type theory don't meet the principle of compositionality, DTS meets this principle with the syntax of CCG (\citet{Steedman1996}). In \Cref{section:inquisitive_meaning_with_dts}, we will show the way to compose the meanings of some sentences. \par
+One of the another significant features of DTS is that presupposition and anaphora are represented by underspecified terms $@_i$. DTS also considers presupposition and anaphora resolution as proof search of underspecified term $@_i$. 
+\section{Inquisitive meaning with DTS\label{section:inquisitive_meaning_with_dts}}
+
+Semantic representations of interrogative sentences such as polar question, alternative question and wh question can't be represented in former DTS. In this paper, we introduce existential type (\citet{Luo1994}) $\bigoplus$-Type in  DTS to express the meaning of wh question.  $\bigoplus$-Type is also called as weak-sigma type and inference rules of $\bigoplus$-Type is shown in \Cref{fig:inference rules of existential type}.
+\begin{figure}
+\scalebox{0.8}{
+  \begin{prooftree}
+    \hypo{ A: type_i  }
+    \infer0[k]{ x : A }\ellipsis{}{B: type_j}
+    \infer2[$(\bigoplus F)$, k]{ \dExi[x]{A}{B} : type_{max(i, j)} }
+  \end{prooftree}
+  
+  \begin{prooftree}
+    \hypo{ t: A  }
+    \hypo{ u : B[x/t] }
+    \infer2[$(\bigoplus I)$]{ [t, u] : \dExi[x]{A}{B} }
+  \end{prooftree}
+ 
+  \begin{prooftree}
+    \hypo{ [t, u]: \dExi[x]{A}{B} }
+    \infer0[k]{ x : A}
+    \infer0[k]{ y : B(x)}
+    \infer2[]{}\ellipsis{}{m: C}
+    \infer2[$(\bigoplus E)$, k]{case_{[t, u]}m: C }
+  \end{prooftree}
+  
+  
+}
+\caption{Inference rules of $\bigoplus$-Type. Elimination rule can be applied if $m: C$ and open assumptions which depend on $m: C$ don't have $x, y$ as free variables.(\textcolor{red}{fix layout})}
+    \label{fig:inference rules of existential type}
+\end{figure}
+
+
+The semantic representations of polar question and alternative question are represented by using $\biguplus\mbox{-Type}$. In previous study using DTS, $\biguplus\mbox{-Type}$ was used for expressing the semantic representations of declarative-or sentences (\textcolor{red}{fix this expression}). However, we decide to use $\biguplus\mbox{-Type}$ for  polar question and alternative question and modify the semantic representations of declarative-or sentences (\textcolor{red}{fix this expression}). (10) is a simple alternative question and semantic representation is (11). \par
+\begin{align}
+\mbox{Does Mary raise a horse or}_{alt}\mbox{  a pony? }\\
+\dOr{\dSigma[u]{\dSigma[x]{entity}{\pred{horse}(x)}}{\pred{raise}(m, \pi_1 u)}}{\dSigma[u]{\dSigma[x]{entity}{\pred{pony}(x)}}{\pred{raise}(m, \pi_1 u)}}
+\end{align}
+In inquisitive semantics, declarative-or sentences (\textcolor{red}{fix this expression}) is distinguished with alternative question by double negation. However, 
+\begin{align}
+\mbox{Mary raises a horse or}_{dcl}\mbox{  a pony. }\\
+\begin{multlined}[t]
+(\lnot \dSigma[u]{\dSigma[x]{entity}{\pred{horse}(x)}}{\pred{raise}(m, \pi_1 u)} \rightarrow \dSigma[u]{\dSigma[x]{entity}{\pred{pony}(x)}}{\pred{raise}(m, \pi_1 u)})\\
+\land(\lnot \dSigma[u]{\dSigma[x]{entity}{\pred{pony}(x)}}{\pred{raise}(m, \pi_1 u)} \rightarrow \dSigma[u]{\dSigma[x]{entity}{\pred{horse}(x)}}{\pred{raise}(m, \pi_1 u)})\\
+\land(\dOr{ \dSigma[x]{entity}{\pred{pony}(x)}}{ \dSigma[x]{entity}{\pred{horse}(x)}})
+\end{multlined}
+\end{align}
+....
+\section{Conclusion}
+....
+
+\bibliographystyle{chicago}
+\bibliography{mybib}
+
+
+\end{document}
