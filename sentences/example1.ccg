@@ -1,5 +1,5 @@
-(S (NP John) (S\NP runs))
-(S (NP John) (S\NP (<S\NP>/NP likes) (NP Mary)))
+(S (<S/<S\NP>> John) (S\NP runs))
+(S (<S/<S\NP>> John) (<S\<S/<S\NP>>> (<S\<S/<S\NP>>>/<S\<S/NP>> likes) (<S\<S/NP>> Mary)))
 (S (<S/<S\NP>> (<S/<S\NP>>/N every) (N boy)) (S\NP sleeps))
 (S (<S/<S\NP>> (<S/<S\NP>>/N some) (N boy)) (S\NP sleeps))
-(S (S (NP John) (S\NP runs)) (S\S .))
+(S (S (<S/<S\NP>> John) (S\NP runs)) (S\S .))

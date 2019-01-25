@@ -1,8 +1,11 @@
-# Semantic Lexicon for comparatives
+# Semantic Lexicon for question
 
 # Proper Noun
-- category: NP
-  semantics: \E. E
+- category: S/(S\NP)
+  semantics: \E P. P(E)
+
+- category: S\(S/NP)
+  semantics: \E P. P(E)
 
 # Common Noun
 - category: N
@@ -13,8 +16,8 @@
   semantics: \E x. E(x)
 
 # Transitive Verb
-- category: (S\NP)/NP
-  semantics: \E x y. E(x,y)
+- category: (S\(S/(S\NP)))/(S\(S/NP))
+  semantics: \E Q P.P(\x. Q(\y. E(x,y)))
 
 # Determiner
 - category: (S/(S\NP))/N
