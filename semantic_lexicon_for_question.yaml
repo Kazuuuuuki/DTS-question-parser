@@ -1,7 +1,16 @@
 # Semantic Lexicon for question
 
+# disjunction
+- category: (S\S)/S
+  semantics: \L S1 S2. (S1 | S2)
+  surf: or
+
 # auxiliary
 - category: (S\NP)/(S\NP)
+  semantics: \E P. P
+  surf: do
+
+- category: (S/S)
   semantics: \E P. P
   surf: do
 
@@ -41,3 +50,16 @@
 - category: (S/(S\NP))/N
   semantics: \E F G. - exists x.(F(x) & G(x))
   surf: "no"
+
+
+# wh
+
+- category: S/(S\NP)
+  semantics: \E P. existential(entity, P(x))
+  surf: who
+
+# question?
+
+- category: S\S
+  semantics: \E S. (S | - S)
+  surf: "?"
