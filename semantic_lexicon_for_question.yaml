@@ -5,6 +5,14 @@
   semantics: \L S1 S2. (S1 | S2)
   surf: or
 
+- category: ((S\NP)\(S\NP))/(S\NP)
+  semantics: \L P Q x. (Q(x) | P(x))
+  surf: or
+
+- category: ((S_[or=true]\NP)\(S\NP))/(S\NP)
+  semantics: \L P Q x. ((Q(x) | P(x)) & (Q(x) -> - P(x)) & (P(x) -> - Q(x)))
+  surf: or
+
 # auxiliary
 - category: (S\NP)/(S\NP)
   semantics: \E P. P
@@ -19,11 +27,18 @@
   semantics: \E P x. -P(x)
   surf: not
 
+- category: (S\NP)/(S\NP)
+  semantics: \E P x. -P(x)
+  surf: didn't
+
 # Proper Noun
 - category: S/(S\NP)
   semantics: \E P. P(E)
 
 - category: S\(S/NP)
+  semantics: \E P. P(E)
+
+- category: S_[or=true]/(S_[or=true]\NP)
   semantics: \E P. P(E)
 
 # Common Noun
@@ -58,8 +73,12 @@
   semantics: \E P. existential(entity, P(x))
   surf: who
 
-# question?
+# question
+#John came or didn't come.と
+#Did John come or din't come?の意味を分けるべきか？
+#orの意味と合わせるなら、疑問文の方にalternativeの意味を追加すれば良い？この場合は二重否定除去になる。
+#再考の余地あり
 
 - category: S\S
-  semantics: \E S. (S | - S)
+  semantics: \E S. ((S | - S) & (S -> --S) & (-S -> -S))
   surf: "?"
