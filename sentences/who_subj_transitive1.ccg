@@ -1,2 +1,2 @@
 (S (<S/<S\NP>> John) (<S\<S/<S\NP>>> (<S\<S/<S\NP>>>/<S\<S/NP>> likes) (<S\<S/NP>> Mary)))
-(S (<S/<S\NP>> Who) (<S\<S/<S\NP>>> (<S\<S/<S\NP>>>/<S\<S/NP>> likes) (<S\<S/NP>> Mary)))
+(S (S_some (<S_some/<S\NP>> Who) (<S_some\<S_some/<S\NP>>> (<S_some\<S_some/<S\NP>>>/<S\<S/NP>> likes) (<S\<S/NP>> Mary))) (S\S_some ?))

@@ -5,6 +5,10 @@
   semantics: \L S1 S2. (S1 | S2)
   surf: or
 
+- category: (S_[or=true]\S)/S
+  semantics: \L S1 S2. ((S1 | S2) & (S1 -> - S2) & (S2 -> - S1))
+  surf: or
+
 - category: ((S\NP)\(S\NP))/(S\NP)
   semantics: \L P Q x. (Q(x) | P(x))
   surf: or
@@ -53,6 +57,12 @@
 - category: (S\(S/(S\NP)))/(S\(S/NP))
   semantics: \E Q P.P(\x. Q(\y. E(x,y)))
 
+- category: (S_[some=true]\(S_[some=true]/(S\NP)))/(S\(S/NP))
+  semantics: \E Q P.P(\x. Q(\y. E(x,y)))
+
+- category: (S_[all=true]\(S_[all=true]/(S\NP)))/(S\(S/NP))
+  semantics: \E Q P.P(\x. Q(\y. E(x,y)))
+
 # Determiner
 - category: (S/(S\NP))/N
   semantics: \E F G. all x.(F(x) -> G(x))
@@ -69,8 +79,12 @@
 
 # wh
 
-- category: S/(S\NP)
+- category: S_[some=true]/(S\NP)
   semantics: \E P. existential(entity, P(x))
+  surf: who
+
+- category: S_[all=true]/(S\NP)
+  semantics: \E P. pi(entity, (P(x) | - P(x)))
   surf: who
 
 # question
@@ -81,4 +95,12 @@
 
 - category: S\S
   semantics: \E S. ((S | - S) & (S -> --S) & (-S -> -S))
+  surf: "?"
+
+- category: S\S_[some=true]
+  semantics: \E S. S
+  surf: "?"
+
+- category: S\S_[all=true]
+  semantics: \E S. S
   surf: "?"

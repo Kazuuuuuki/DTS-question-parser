@@ -1,2 +1,2 @@
-(S (<S/<S\NP>> Who) (S\NP runs))
-(S (<S/<S\NP>> John) (S\NP runs))
+(S (S_some (<S_some/<S\NP>> Who) (S\NP run)) (S\S_some ?))
+(S (<S/<S\NP>> John) (S\NP ran))
