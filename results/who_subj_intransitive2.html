@@ -31,8 +31,10 @@ MathJax.Hub.Config({
 </script>
   </head>
   <body>
-  <p>Premise 1: Who runs</p>
+  <p>Premise 1: Who run ?</p>
 <math xmlns='http://www.w3.org/1998/Math/MathML'><mfrac linethickness='0px'>
+  <mrow><mrow><mo>&lt;</mo><mfrac linethickness='1px'>
+  <mrow><mfrac linethickness='0px'>
   <mrow><mrow><mo>&gt;</mo><mfrac linethickness='1px'>
   <mrow><mfrac linethickness='0px'>
   <mrow><mfrac linethickness='0px'>
@@ -41,7 +43,13 @@ MathJax.Hub.Config({
   <mrow><mfrac linethickness='0px'>
   <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
 </mrow>
-  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S/(S\NP)  </mi>
+  <mrow><msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>S_  </mi>
+  <mrow>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[some=true]  </mi>
+  </mrow>
+</msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>/(S\NP)  </mi>
 </mrow>
 </mfrac>
 </mrow>
@@ -50,7 +58,8 @@ MathJax.Hub.Config({
   <mrow><mtext fontsize='1.0' color='Black'>&lambda;P.</mtext><mspace width='.1em'/>
 <mtext fontsize='1.0' color='Black'>existential</mtext>
 <mtext>(</mtext><mtext fontsize='1.0' color='Black'>entity</mtext>
-<mtext>,</mtext><mspace width=".1em"/><mtext fontsize='1.0' color='Black'>P</mtext>
+<mtext>,</mtext><mspace width=".1em"/><mtext fontsize='1.0' color='Black'>&lambda;x.</mtext><mspace width='.1em'/>
+<mtext fontsize='1.0' color='Black'>P</mtext>
 <mtext>(</mtext><mtext fontsize='1.0' color='Black'>x</mtext>
 <mtext>)</mtext>
 <mtext>)</mtext>
@@ -58,7 +67,7 @@ MathJax.Hub.Config({
 </mfrac>
 <mfrac linethickness='0px'>
   <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>runs</mtext>
+  <mrow><mtext  fontsize='1.0' color='Black'>run</mtext>
 </mrow>
   <mrow><mfrac linethickness='0px'>
   <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
@@ -70,9 +79,50 @@ MathJax.Hub.Config({
 </mfrac>
 </mrow>
   <mrow><mtext fontsize='1.0' color='Black'>&lambda;x.</mtext><mspace width='.1em'/>
-<mtext fontsize='1.0' color='Black'>runs</mtext>
+<mtext fontsize='1.0' color='Black'>run</mtext>
 <mtext>(</mtext><mtext fontsize='1.0' color='Black'>x</mtext>
 <mtext>)</mtext>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow><msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>S_  </mi>
+  <mrow>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[some=true]  </mi>
+  </mrow>
+</msub>
+</mrow>
+</mfrac>
+</mrow></mrow>
+  <mrow><mtext fontsize='1.0' color='Black'>existential</mtext>
+<mtext>(</mtext><mtext fontsize='1.0' color='Black'>entity</mtext>
+<mtext>,</mtext><mspace width=".1em"/><mtext fontsize='1.0' color='Black'>&lambda;x.</mtext><mspace width='.1em'/>
+<mtext fontsize='1.0' color='Black'>run</mtext>
+<mtext>(</mtext><mtext fontsize='1.0' color='Black'>x</mtext>
+<mtext>)</mtext>
+<mtext>)</mtext>
+</mrow>
+</mfrac>
+<mfrac linethickness='0px'>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Black'>?</mtext>
+</mrow>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
+</mrow>
+  <mrow><msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\S_  </mi>
+  <mrow>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[some=true]  </mi>
+  </mrow>
+</msub>
+</mrow>
+</mfrac>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow><mtext fontsize='1.0' color='Black'>&lambda;S.</mtext><mspace width='.1em'/>
+<mtext fontsize='1.0' color='Black'>S</mtext>
 </mrow>
 </mfrac>
 </mrow>
@@ -82,13 +132,14 @@ MathJax.Hub.Config({
 </mrow></mrow>
   <mrow><mtext fontsize='1.0' color='Black'>existential</mtext>
 <mtext>(</mtext><mtext fontsize='1.0' color='Black'>entity</mtext>
-<mtext>,</mtext><mspace width=".1em"/><mtext fontsize='1.0' color='Black'>runs</mtext>
+<mtext>,</mtext><mspace width=".1em"/><mtext fontsize='1.0' color='Black'>&lambda;x.</mtext><mspace width='.1em'/>
+<mtext fontsize='1.0' color='Black'>run</mtext>
 <mtext>(</mtext><mtext fontsize='1.0' color='Black'>x</mtext>
 <mtext>)</mtext>
 <mtext>)</mtext>
 </mrow>
 </mfrac>
-</math><p>Conclusion: John runs</p>
+</math><p>Conclusion: John ran</p>
 <math xmlns='http://www.w3.org/1998/Math/MathML'><mfrac linethickness='0px'>
   <mrow><mrow><mo>&gt;</mo><mfrac linethickness='1px'>
   <mrow><mfrac linethickness='0px'>
@@ -112,7 +163,7 @@ MathJax.Hub.Config({
 </mfrac>
 <mfrac linethickness='0px'>
   <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>runs</mtext>
+  <mrow><mtext  fontsize='1.0' color='Black'>ran</mtext>
 </mrow>
   <mrow><mfrac linethickness='0px'>
   <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
@@ -124,7 +175,7 @@ MathJax.Hub.Config({
 </mfrac>
 </mrow>
   <mrow><mtext fontsize='1.0' color='Black'>&lambda;x.</mtext><mspace width='.1em'/>
-<mtext fontsize='1.0' color='Black'>runs</mtext>
+<mtext fontsize='1.0' color='Black'>ran</mtext>
 <mtext>(</mtext><mtext fontsize='1.0' color='Black'>x</mtext>
 <mtext>)</mtext>
 </mrow>
@@ -134,7 +185,7 @@ MathJax.Hub.Config({
 </mrow>
 </mfrac>
 </mrow></mrow>
-  <mrow><mtext fontsize='1.0' color='Black'>runs</mtext>
+  <mrow><mtext fontsize='1.0' color='Black'>ran</mtext>
 <mtext>(</mtext><mtext fontsize='1.0' color='Black'>John</mtext>
 <mtext>)</mtext>
 </mrow>
