@@ -22,10 +22,16 @@
 
 CCGの木と論理式は、`results/example1.html` で見ることができる。
 
-### TO DO
+## テストセットによる評価
 
-- Proverと繋げる
+```
+./run_test.sh
+```
 
+- 問題のファイル `testset/question01.ccg`  etc.
+- 答えのファイル `testset/question01.answer` etc.
+- `results/main.html` に結果の一覧が表示される。
+- `coqlib.v` にCoqのタクティクスを書く。 `nltac` が実行されるタクティクス名。
 
 ## CCG木の書き方
 
@@ -51,15 +57,22 @@ CCGの木と論理式は、`results/example1.html` で見ることができる�
 - テンプレート・公理では、以下の論理記号を使う。
 
 ```
-否定     -A
-連言     A & B
-選言     A | B
-条件法   A -> B
-Pi型    all x. A
-Sigma型 exists x. A
-等号     x = y
-ラムダ   \x. A
+否定            -A
+連言            A & B
+選言            A | B
+条件法          A -> B
+Pi型           all x. B  もしくは  pi(A, \x.B)
+Sigma型        sig(A, \x.B)
+Existential型  ex(A, \x.B)
+pi_1 u         projT1(u)
+pi_2 u         projT2(u)
+等号           x = y
+ラムダ         \x. A
 ```
+
+### TO DO
+
+- `pi(A, \x.B)` の変換
 
 #### カッコについての注意!!
 
