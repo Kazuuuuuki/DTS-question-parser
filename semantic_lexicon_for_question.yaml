@@ -69,7 +69,8 @@
   surf: every
 
 - category: (S/(S\NP))/N
-  semantics: \E F G. exists x.(F(x) & G(x))
+  semantics: \E F G. sig(Entity, \x.(F(x) & G(x)))
+  # semantics: \E F G. exists x.(F(x) & G(x))
   surf: some
 
 - category: (S/(S\NP))/N
@@ -80,11 +81,13 @@
 # wh
 
 - category: S_[some=true]/(S\NP)
-  semantics: \E P. existential(entity, P(x))
+  semantics: \E P. ex(Entity, \x.P(x))
+  # semantics: \E P. existential(entity, \x.P(x))
   surf: who
 
 - category: S_[all=true]/(S\NP)
-  semantics: \E P. pi(entity, (P(x) | - P(x)))
+  semantics: \E P. all x. (P(x) | - P(x))
+  # semantics: \E P. pi(entity, (P(x) | - P(x)))
   surf: who
 
 # question
