@@ -1,0 +1,563 @@
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.7.12)  6 FEB 2019 14:10
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/leqno.clo
+File: leqno.clo 2016/12/29 v1.2a Standard LaTeX option (left equation numbers)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen118
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/ncctools/nccmath.sty
+Package: nccmath 2005/02/21 v1.2 Additional Math Commands (NCC)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen119
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen120
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box42
+\strutbox@=\box43
+\big@size=\dimen121
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks16
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks17
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+\NCC@fracrulewidth=\dimen128
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 99.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+))
+\Gin@req@height=\dimen129
+\Gin@req@width=\dimen130
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip46
+\bibsep=\skip47
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count103
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lkproof/proof.sty
+\inferLineSkip=\dimen131
+\inferLabelSkip=\dimen132
+\@LeftOffset=\dimen133
+\@RightOffset=\dimen134
+\@SavedLeftOffset=\dimen135
+\UpperWidth=\dimen136
+\LowerWidth=\dimen137
+\LowerHeight=\dimen138
+\UpperLeftOffset=\dimen139
+\UpperRightOffset=\dimen140
+\UpperCenter=\dimen141
+\LowerCenter=\dimen142
+\UpperAdjust=\dimen143
+\RuleAdjust=\dimen144
+\LowerAdjust=\dimen145
+\RuleWidth=\dimen146
+\HLabelAdjust=\dimen147
+\VLabelAdjust=\dimen148
+\WidthAdjust=\dimen149
+\@UpperPart=\box44
+\@LowerPart=\box45
+\@LabelPart=\box46
+\ResultBox=\box47
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/ebproof/ebproof.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2018/03/05 L3 programming layer (loader) 
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2018/03/05 L3 programming layer (code)
+\c_max_int=\count104
+\l_tmpa_int=\count105
+\l_tmpb_int=\count106
+\g_tmpa_int=\count107
+\g_tmpb_int=\count108
+\g__intarray_font_int=\count109
+\g__prg_map_int=\count110
+\c_log_iow=\count111
+\l_iow_line_count_int=\count112
+\l__iow_line_target_int=\count113
+\l__iow_one_indent_int=\count114
+\l__iow_indent_int=\count115
+\c_zero_dim=\dimen150
+\c_max_dim=\dimen151
+\l_tmpa_dim=\dimen152
+\l_tmpb_dim=\dimen153
+\g_tmpa_dim=\dimen154
+\g_tmpb_dim=\dimen155
+\c_zero_skip=\skip48
+\c_max_skip=\skip49
+\l_tmpa_skip=\skip50
+\l_tmpb_skip=\skip51
+\g_tmpa_skip=\skip52
+\g_tmpb_skip=\skip53
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+\l_keys_choice_int=\count116
+\c__fp_leading_shift_int=\count117
+\c__fp_middle_shift_int=\count118
+\c__fp_trailing_shift_int=\count119
+\c__fp_big_leading_shift_int=\count120
+\c__fp_big_middle_shift_int=\count121
+\c__fp_big_trailing_shift_int=\count122
+\c__fp_Bigg_leading_shift_int=\count123
+\c__fp_Bigg_middle_shift_int=\count124
+\c__fp_Bigg_trailing_shift_int=\count125
+\c__fp_rand_size_int=\count126
+\c__fp_rand_four_int=\count127
+\c__fp_rand_eight_int=\count128
+\l__sort_length_int=\count129
+\l__sort_min_int=\count130
+\l__sort_top_int=\count131
+\l__sort_max_int=\count132
+\l__sort_true_max_int=\count133
+\l__sort_block_int=\count134
+\l__sort_begin_int=\count135
+\l__sort_end_int=\count136
+\l__sort_A_int=\count137
+\l__sort_B_int=\count138
+\l__sort_C_int=\count139
+\l__tl_build_start_index_int=\count140
+\l__tl_build_index_int=\count141
+\l__tl_analysis_normal_int=\count142
+\l__tl_analysis_index_int=\count143
+\l__tl_analysis_nesting_int=\count144
+\l__tl_analysis_type_int=\count145
+\l__regex_internal_a_int=\count146
+\l__regex_internal_b_int=\count147
+\l__regex_internal_c_int=\count148
+\l__regex_balance_int=\count149
+\l__regex_group_level_int=\count150
+\l__regex_mode_int=\count151
+\c__regex_cs_in_class_mode_int=\count152
+\c__regex_cs_mode_int=\count153
+\l__regex_catcodes_int=\count154
+\l__regex_default_catcodes_int=\count155
+\c__regex_catcode_D_int=\count156
+\c__regex_catcode_S_int=\count157
+\c__regex_catcode_L_int=\count158
+\c__regex_catcode_O_int=\count159
+\c__regex_catcode_A_int=\count160
+\c__regex_all_catcodes_int=\count161
+\l__regex_show_lines_int=\count162
+\l__regex_min_state_int=\count163
+\l__regex_max_state_int=\count164
+\l__regex_left_state_int=\count165
+\l__regex_right_state_int=\count166
+\l__regex_capturing_group_int=\count167
+\l__regex_min_pos_int=\count168
+\l__regex_max_pos_int=\count169
+\l__regex_curr_pos_int=\count170
+\l__regex_start_pos_int=\count171
+\l__regex_success_pos_int=\count172
+\l__regex_curr_char_int=\count173
+\l__regex_curr_catcode_int=\count174
+\l__regex_last_char_int=\count175
+\l__regex_case_changed_char_int=\count176
+\l__regex_curr_state_int=\count177
+\l__regex_step_int=\count178
+\l__regex_min_active_int=\count179
+\l__regex_max_active_int=\count180
+\l__regex_replacement_csnames_int=\count181
+\l__regex_match_count_int=\count182
+\l__regex_min_submatch_int=\count183
+\l__regex_submatch_int=\count184
+\l__regex_zeroth_submatch_int=\count185
+\g__regex_trace_regex_int=\count186
+\c_empty_box=\box48
+\l_tmpa_box=\box49
+\l_tmpb_box=\box50
+\g_tmpa_box=\box51
+\g_tmpb_box=\box52
+\l__box_top_dim=\dimen156
+\l__box_bottom_dim=\dimen157
+\l__box_left_dim=\dimen158
+\l__box_right_dim=\dimen159
+\l__box_top_new_dim=\dimen160
+\l__box_bottom_new_dim=\dimen161
+\l__box_left_new_dim=\dimen162
+\l__box_right_new_dim=\dimen163
+\l__box_internal_box=\box53
+\l__coffin_internal_box=\box54
+\l__coffin_internal_dim=\dimen164
+\l__coffin_offset_x_dim=\dimen165
+\l__coffin_offset_y_dim=\dimen166
+\l__coffin_x_dim=\dimen167
+\l__coffin_y_dim=\dimen168
+\l__coffin_x_prime_dim=\dimen169
+\l__coffin_y_prime_dim=\dimen170
+\c_empty_coffin=\box55
+\l__coffin_aligned_coffin=\box56
+\l__coffin_aligned_internal_coffin=\box57
+\l_tmpa_coffin=\box58
+\l_tmpb_coffin=\box59
+\l__coffin_display_coffin=\box60
+\l__coffin_display_coord_coffin=\box61
+\l__coffin_display_pole_coffin=\box62
+\l__coffin_display_offset_dim=\dimen171
+\l__coffin_display_x_dim=\dimen172
+\l__coffin_display_y_dim=\dimen173
+\l__coffin_bounding_shift_dim=\dimen174
+\l__coffin_left_corner_dim=\dimen175
+\l__coffin_right_corner_dim=\dimen176
+\l__coffin_bottom_corner_dim=\dimen177
+\l__coffin_top_corner_dim=\dimen178
+\l__coffin_scaled_total_height_dim=\dimen179
+\l__coffin_scaled_width_dim=\dimen180
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/l3kernel/l3dvipdfmx.def
+File: l3dvidpfmx.def 2017/03/18 v L3 Experimental driver: dvipdfmx
+\g__driver_image_int=\count187
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2018/02/21 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count188
+\g__xparse_grabber_int=\count189
+\l__xparse_m_args_int=\count190
+\l__xparse_mandatory_args_int=\count191
+\l__xparse_v_nesting_int=\count192
+)
+Package: ebproof 2017/05/17 v2.0 EB's proof trees
+\l_ebproof_separation_dim=\dimen181
+\l_ebproof_rule_margin_dim=\dimen182
+\l_ebproof_rule_thickness_dim=\dimen183
+\l_ebproof_rule_separation_dim=\dimen184
+\l_ebproof_rule_dash_length_dim=\dimen185
+\l_ebproof_rule_dash_space_dim=\dimen186
+\l_ebproof_label_separation_dim=\dimen187
+\l_ebproof_label_axis_dim=\dimen188
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofnewrulestyle with sig. 'mm' on line 78.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofnewstyle with sig. 'mm' on line 140.
+.................................................
+\l_ebproof_transit_dim=\dimen189
+\g_ebproof_level_int=\count193
+\g_ebproof_stack_box=\box63
+\l_ebproof_a_box=\box64
+\l_ebproof_b_box=\box65
+\l_ebproof_c_box=\box66
+\l_ebproof_d_box=\box67
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofset with sig. 'm' on line 615.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofhypo with sig. 'O{}m' on line 623.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofinfer with sig. 'O{}mO{}m' on line 635.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofellipsis with sig. 'mm' on line 659.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofrewrite with sig. 'm' on line 686.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofdelims with sig. 'mm' on line 712.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofAlter with sig. 'm' on line 722.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofDelims with sig. '' on line 724.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofEllipsis with sig. '' on line 726.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofHypo with sig. '' on line 728.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ebproofInfer with sig. '' on line 730.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-environment"
+. 
+. Defining environment 'prooftree' with sig. 'sO{}' on line 763.
+.................................................
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvips.def on input line 147.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+(./myccg.sty) (./mydts.sty)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count194
+\calc@Bcount=\count195
+\calc@Adimen=\dimen190
+\calc@Bdimen=\dimen191
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count196
+\calc@Cskip=\skip56
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count197
+\l_MT_multwidth_dim=\dimen192
+\origjot=\skip57
+\l_MT_shortvdotswithinadjustabove_dim=\dimen193
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen194
+\l_MT_above_intertext_sep=\dimen195
+\l_MT_below_intertext_sep=\dimen196
+\l_MT_above_shortintertext_sep=\dimen197
+\l_MT_below_shortintertext_sep=\dimen198
+)
+(./mymacro.sty)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/03 v0.21.3 Intelligent cross-referencing
+)
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+ (I search kanjifont definition file: . . )
+(I search font definition file: . . . . . . . )
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 29.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+(I search kanjifont definition file: . . ) (I search font definition file: . .
+. . . . . )
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 30.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 34.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 34.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
+
+[1
+
+]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 52.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 52.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
+ Excluding 'comment' comment. [2]
+Overfull \hbox (8.21773pt too wide) in paragraph at lines 99--100
+[][] 
+ []
+
+
+Overfull \hbox (46.59564pt too wide) in paragraph at lines 126--127
+[][] 
+ []
+
+
+Overfull \hbox (9.79358pt too wide) in paragraph at lines 163--164
+[]\OT1/ptm/m/n/10.95 One of the an-other sig-nif-i-cant fea-tures of DTS is tha
+t pre-sup-po-si-tion and anaphora
+ []
+
+
+Overfull \hbox (36.96808pt too wide) in paragraph at lines 190--191
+[][] 
+ []
+
+[3] (./main.bbl [4]
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 8.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 8.
+
+
+Underfull \hbox (badness 3769) in paragraph at lines 13--18
+[]\OT1/ptm/m/n/10.95 Champollion, L., I. Cia-rdelli, and F. Roelof-sen (2015). 
+ Some ques-
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 13--18
+\OT1/ptm/m/n/10.95 tions in typed in-quis-i-tive se-man-tics.  In \OT1/ptm/m/it
+/10.95 Talk at work-shop on Ques-
+ []
+
+) [5] (./main.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 12532 strings out of 493281
+ 243170 string characters out of 6145041
+ 328743 words of memory out of 5000000
+ 16388 multiletter control sequences out of 15000+600000
+ 548742 words of font info for 85 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 33i,28n,33p,10362b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on main.dvi (5 pages, 20828 bytes).
