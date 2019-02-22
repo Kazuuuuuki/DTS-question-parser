@@ -1,0 +1,2 @@
+(S (<S/<S\NP>> Everyone) (S\NP run))
+(S (S_all (<S_all/<S\NP>> Who) (S\NP run)) (S\S_all ?))

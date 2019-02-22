@@ -33,6 +33,10 @@
   semantics: \L E F G Q. (E(Q) | F(Q) | G(Q))
   surf: or
 
+- category: (((S/(S\NP))\(S/(S\NP)))\(S/(S\NP)))/(S/(S\NP))
+  semantics: \L E F G Q. (E(Q) & F(Q) & G(Q))
+  surf: and
+
 - category: ((S_[or=true]\NP)\(S\NP))/(S\NP)
   semantics: \L P Q x. ((Q(x) | P(x)) & (Q(x) -> - P(x)) & (P(x) -> - Q(x)))
   surf: or
