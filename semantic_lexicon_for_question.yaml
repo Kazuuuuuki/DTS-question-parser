@@ -1,9 +1,13 @@
 # Semantic Lexicon for question
 
-# disjunction
+# disjunction and conjunction
 - category: (S\S)/S
   semantics: \L S1 S2. (S1 | S2)
   surf: or
+
+- category: (S\S)/S
+  semantics: \L S1 S2. (S1 & S2)
+  surf: and
 
 - category: (S_[or=true]\S)/S
   semantics: \L S1 S2. ((S1 | S2) & (S1 -> - S2) & (S2 -> - S1))
@@ -13,14 +17,35 @@
   semantics: \L P Q x. (Q(x) | P(x))
   surf: or
 
+- category: ((S\NP)\(S\NP))/(S\NP)
+  semantics: \L P Q x. (Q(x) & P(x))
+  surf: and
+
+- category: ((S/(S\NP))\(S/(S\NP)))/(S/(S\NP))
+  semantics: \L E F Q. (E(Q) & F(Q))
+  surf: and
+
+- category: ((S/(S\NP))\(S/(S\NP)))/(S/(S\NP))
+  semantics: \L E F Q. (E(Q) | F(Q))
+  surf: or
+
+- category: (((S/(S\NP))\(S/(S\NP)))\(S/(S\NP)))/(S/(S\NP))
+  semantics: \L E F G Q. (E(Q) | F(Q) | G(Q))
+  surf: or
+
 - category: ((S_[or=true]\NP)\(S\NP))/(S\NP)
   semantics: \L P Q x. ((Q(x) | P(x)) & (Q(x) -> - P(x)) & (P(x) -> - Q(x)))
   surf: or
+
 
 # auxiliary
 - category: (S\NP)/(S\NP)
   semantics: \E P. P
   surf: do
+
+- category: (S\NP)/(S\NP)
+  semantics: \E P. P
+  surf: did
 
 - category: (S/S)
   semantics: \E P. P
@@ -74,8 +99,20 @@
   surf: some
 
 - category: (S/(S\NP))/N
-  semantics: \E F G. - exists x.(F(x) & G(x))
+  semantics: \E F G.  pi(F(x), \x.(- (P(x))))
   surf: "no"
+
+- category: S/(S\NP)
+  semantics: \E P. sig(Entity, \x.(P(x)))
+  surf: "someone"
+
+- category: S/(S\NP)
+  semantics: \E P. pi(Entity, \x.(P(x)))
+  surf: "everyone"
+
+- category: S/(S\NP)
+  semantics: \E P. pi(Entity, \x.(- (P(x))))
+  surf: "nobody"
 
 
 # wh
@@ -86,9 +123,13 @@
   surf: who
 
 - category: S_[all=true]/(S\NP)
-  semantics: \E P. all x. (P(x) | - P(x))
+  semantics: \E P. pi(Entity, \x.(P(x) | - P(x)))
   # semantics: \E P. pi(entity, (P(x) | - P(x)))
   surf: who
+
+- category: (S/(S\NP))/(S/(S\NP))
+  semantics: \E P Q. (pi(Entity, \y.((Q(y) -> (P(\x.x) = y)))) & P(Q))
+  surf: only
 
 # question
 #John came or didn't come.と

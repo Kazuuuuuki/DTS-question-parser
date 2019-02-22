@@ -1,0 +1,2 @@
+(S (<S/<S\NP>> John) (S\NP (<<S\NP>/<S\NP>> didn't) (S\NP run)))
+(S (S_some (<S_some/<S\NP>> Who) (S\NP run)) (S\S_some ?))
