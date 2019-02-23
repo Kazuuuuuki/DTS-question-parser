@@ -28,6 +28,7 @@ for f in ./testset/*.ccg; do
 done
 
 accuracy=`echo "scale=4; $correct / $total" | bc -l`
+date=`date +%Y-%m-%d_%H:%M:%S`
 echo "Accuracy: "$correct" / "$total" = "$accuracy
 
 echo "<!doctype html>
@@ -43,7 +44,10 @@ echo "<!doctype html>
 </head>
 <body>
 <table border='1'>
+<ul>
+<li>"$date"
 <li>Accuracy : "$correct" / "$total" = "$accuracy"</li>
+</ul>
 <tr>
   <td>id</td>
   <td>problem</td>
