@@ -23,6 +23,7 @@ python $c2l_dir/scripts/semparse.py $res_dir/$jigg $semantics $res_dir/${jigg/.x
 python $c2l_dir/scripts/prove.py \
     $res_dir/${jigg/.xml/.sem.xml} \
     --graph_out ${res_dir}/${jigg/.xml/.html} \
+	--timeout 10 \
     2> /dev/null
 
 # python ${c2l_dir}/scripts/visualize.py $res_dir/${jigg/.xml/.sem.xml} \
