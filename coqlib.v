@@ -5,6 +5,8 @@ Parameter Event : Type.
 Implicit Arguments ex [].
 Implicit Arguments sig [].
 
+Parameter pi : Type.
+
 (* Preliminary tactics *)
 
 Ltac apply_ent :=
