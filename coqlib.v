@@ -1,12 +1,16 @@
 (* Basic types *)
-Parameter Entity : Type.
 Parameter Event : Type.
 
 Implicit Arguments ex [].
 Implicit Arguments sig [].
-
+Inductive Entity : Type := | _John | _Susan | _Lucy.
 Parameter pi : Type.
 
+(*
+Parameter _John : Type.
+Parameter _Susan : Type.
+Parameter _Lucy : Type.
+*)
 (* Preliminary tactics *)
 
 Ltac apply_ent :=
@@ -47,20 +51,66 @@ Ltac solve_false :=
      => apply H
   end.
 
+
+Ltac induction_entity_intransitive :=
+  match goal with
+    | [H0: _ , H1: _, x: Entity|- ?F _ \/  (?F _ -> False) ]
+     => induction x
+  end.
+
+Ltac induction_entity_transitive :=
+  match goal with
+    | [H0: _ , H1: _, x: Entity|- ?F _ _ \/  (?F _ _ -> False) ]
+     => induction x
+  end.
+
+Ltac solve_exh_left_intransitive :=
+  match goal with
+    | [ H : forall x : Entity, ?F x -> ?y = x, H1 : ?F ?y |- ?F ?y \/  (?F ?y -> False)]
+    => try(left;trivial)
+  end.
+
+Ltac solve_exh_left_transitive :=
+  match goal with
+    | [ H : forall x : Entity, ?F x _ -> ?y = x, H1 : ?F ?y _ |- ?F ?y _ \/  (?F ?y _ -> False)]
+    => try(left;trivial)
+  end.
+
+Ltac solve_exh_right_intransitive :=
+  match goal with
+    | [ H : forall x : Entity, ?F x -> _ = x, H1 : ?F _ |- ?F _ \/  (?F _ -> False)]
+    => try(right; intro H2; apply H in H2; inversion H2)
+  end.
+
+Ltac solve_exh_right_transitive :=
+  match goal with
+    | [ H : forall x : Entity, ?F x _ -> _ = x, H1 : ?F _ _ |- ?F _ _ \/  (?F _ _ -> False)]
+    => try(right; intro H2; apply H in H2; inversion H2)
+  end.
+
+Ltac solve_exh_intransitive :=
+  repeat ( try (solve_exh_left_intransitive);
+           try (solve_exh_right_intransitive)).
+
+Ltac solve_exh_transitive :=
+  repeat ( try (solve_exh_left_transitive);
+           try (solve_exh_right_transitive)).
+
 (* Main tactics *)
 
 Ltac nltac_init :=
-  try(intuition;
+  try(
+      intuition;
       try solve_false;
       firstorder;
       repeat subst;
-      firstorder).
+      firstorder
+      ).
 
-Ltac nltac_base := 
-  try nltac_init;
+Ltac nltac_base :=
   try (eauto; eexists; firstorder);
   try (subst; eauto; firstorder; try congruence).
-
+           
 (*
 Ltac nltac_axiom :=
  try first
@@ -76,6 +126,8 @@ Ltac nltac_axiom :=
 
 Ltac nltac_set :=
   repeat (nltac_init;
+          try (nltac_init;induction_entity_intransitive; solve_exh_intransitive; solve_exh_intransitive; solve_exh_intransitive);
+          try (solve_exh_transitive; solve_exh_transitive; solve_exh_transitive);
           try exchange_equality;
           try eqlem_sub).
 
@@ -90,5 +142,8 @@ Ltac nltac_final :=
 
 Ltac nltac :=
   try solve
-    [nltac_set; nltac_final].
+    [nltac_set;  nltac_final].
 
+Parameter _like : Entity -> (Entity -> Prop).
+Parameter _run : Entity -> Prop.
+Theorem t1: (and (forall y:Entity,((_run y) -> (_John = y))) (_run _John)) -> (forall x:Entity,(or (_run x) (not (_run x)))). nltac. Qed.
