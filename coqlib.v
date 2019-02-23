@@ -110,7 +110,7 @@ Ltac nltac_init :=
 Ltac nltac_base :=
   try (eauto; eexists; firstorder);
   try (subst; eauto; firstorder; try congruence).
-           
+
 (*
 Ltac nltac_axiom :=
  try first
@@ -126,8 +126,6 @@ Ltac nltac_axiom :=
 
 Ltac nltac_set :=
   repeat (nltac_init;
-          try (nltac_init;induction_entity_intransitive; solve_exh_intransitive; solve_exh_intransitive; solve_exh_intransitive);
-          try (solve_exh_transitive; solve_exh_transitive; solve_exh_transitive);
           try exchange_equality;
           try eqlem_sub).
 
@@ -143,7 +141,3 @@ Ltac nltac_final :=
 Ltac nltac :=
   try solve
     [nltac_set;  nltac_final].
-
-Parameter _like : Entity -> (Entity -> Prop).
-Parameter _run : Entity -> Prop.
-Theorem t1: (and (forall y:Entity,((_run y) -> (_John = y))) (_run _John)) -> (forall x:Entity,(or (_run x) (not (_run x)))). nltac. Qed.

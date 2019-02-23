@@ -1,0 +1,2 @@
+(S (<S/<S\NP>> John) (S\NP runs))
+(S (S (S/S Does) (S (<S/<S\NP>> John) (S\NP run))) (S\S ?))
