@@ -61,7 +61,7 @@ CCGの木と論理式は、`results/example1.html` で見ることができる�
 連言            A & B
 選言            A | B
 条件法          A -> B
-Pi型           all x. B  もしくは  pi(A, \x.B)
+Pi型           pi(A, \x.B)
 Sigma型        sig(A, \x.B)
 Existential型  ex(A, \x.B)
 pi_1 u         projT1(u)
@@ -69,10 +69,6 @@ pi_2 u         projT2(u)
 等号           x = y
 ラムダ         \x. A
 ```
-
-### TO DO
-
-- `pi(A, \x.B)` の変換
 
 #### カッコについての注意!!
 
