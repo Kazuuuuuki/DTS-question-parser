@@ -17,6 +17,10 @@
   semantics: \L P Q x. (Q(x) | P(x))
   surf: or
 
+- category: ((S_[or=true]\NP)\(S\NP))/(S\NP)
+  semantics: \L P Q x. (Q(x) | P(x) & (Q(x) -> -P(x)) & (P(x) -> -Q(x)))
+  surf: or
+
 - category: ((S\NP)\(S\NP))/(S\NP)
   semantics: \L P Q x. (Q(x) & P(x))
   surf: and
@@ -55,6 +59,10 @@
   semantics: \E P. P
   surf: do
 
+- category: (S_[or=true]/S_[or=true])
+  semantics: \E P. P
+  surf: is
+
 # Negation
 - category: (S\NP)/(S\NP)
   semantics: \E P x. -P(x)
@@ -66,6 +74,9 @@
 
 # Proper Noun
 - category: S/(S\NP)
+  semantics: \E P. P(E)
+
+- category: S_[or=true]/(S_[or=true]\NP)
   semantics: \E P. P(E)
 
 - category: S\(S/NP)
@@ -146,6 +157,10 @@
   surf: "?"
 
 - category: S\S_[some=true]
+  semantics: \E S. S
+  surf: "?"
+
+- category: S\S_[or=true]
   semantics: \E S. S
   surf: "?"
 

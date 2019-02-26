@@ -1,0 +1,2 @@
+(S (<S/<S\NP>> (<S/<S\NP>> John) (<S/<S\NP>>\<S/<S\NP>> (<<S/<S\NP>>\<S/<S\NP>>>/<S/<S\NP>> and) (<S/<S\NP>> Susan))) (S\NP (S\NP walk) (<S\NP>\<S\NP> (<<S\NP>\<S\NP>>/<S\NP> and) (<S\NP> (<S\NP>/<S\NP> didn't) (S\NP run)))))
+(S (S_or (S (S/S Did) (S (<S/<S\NP>> John) (S\NP run))) (S_or\S (<S_or\S>/S or) (S (S/S did) (S (<S/<S\NP>> John) (S\NP walk))))) (S\S_or ?))

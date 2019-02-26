@@ -1,2 +1,2 @@
-(S (S (S/S Is) (S (<S/<S\NP>> Luke) (S\NP (<S\NP>/<S\NP> not) (S\NP right)))) (S\S ?))
-(S (<S/<S\NP>> Luke) (S\NP (<S\NP>/<S\NP> is) (S\NP right)))
+(S (S (S/S Is) (S (<S/<S\NP>> John) (S\NP (<S\NP>/<S\NP> not) (S\NP right)))) (S\S ?))
+(S (<S/<S\NP>> John) (S\NP (<S\NP>/<S\NP> is) (S\NP right)))

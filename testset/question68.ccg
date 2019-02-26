@@ -1,2 +1,2 @@
 (S (S (S/S Did) (S (<S/<S\NP>> John) (S\NP run))) (S\S ?))
-(S (<S/<S\NP>> John) (S\NP (S\NP ran) (<S\NP>\<S\NP> (<<S\NP>\<S\NP>>/<S\NP> and) (<S\NP> (<S\NP>/<S\NP> didn't) (S\NP run)))))
+(S (<S/<S\NP>> John) (S\NP (S\NP run) (<S\NP>\<S\NP> (<<S\NP>\<S\NP>>/<S\NP> and) (<S\NP> (<S\NP>/<S\NP> didn't) (S\NP run)))))
