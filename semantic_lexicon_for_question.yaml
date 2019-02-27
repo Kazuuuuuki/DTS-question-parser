@@ -146,6 +146,9 @@
   semantics: \E P Q. (pi(Entity, \y.((Q(y) -> (P(\x.x) = y)))) & P(Q))
   surf: only
 
+- category: N
+  semantics: \E x. E(x)
+
 # question
 #John came or didn't come.と
 #Did John come or din't come?の意味を分けるべきか？
