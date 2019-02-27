@@ -126,6 +126,8 @@ Ltac nltac_axiom :=
 
 Ltac nltac_set :=
   repeat (nltac_init;
+          try (induction_entity_intransitive; solve_exh_intransitive; solve_exh_intransitive; solve_exh_intransitive);
+          try (solve_exh_transitive; solve_exh_transitive; solve_exh_transitive);
           try exchange_equality;
           try eqlem_sub).
 
@@ -141,3 +143,7 @@ Ltac nltac_final :=
 Ltac nltac :=
   try solve
     [nltac_set;  nltac_final].
+
+
+Parameter _see : Entity -> (Entity -> Prop).
+Theorem t1: (and (forall y:Entity,((_see y _Susan) -> (_John = y))) (_see _John _Susan)) -> (forall x:Entity,(or (_see x _Susan) (not (_see x _Susan)))). nltac. Qed.
