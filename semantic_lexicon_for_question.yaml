@@ -55,6 +55,10 @@
   semantics: \E P. P
   surf: did
 
+- category: ((S_[some=true]/((S\(S/(S\NP)))/(S\(S/NP))))/(S/(S\NP)))\((S_[some=true]/((S\(S/(S\NP)))/(S\(S/NP))))/(S/(S\NP)))
+  semantics: \E P. P
+  surf: did
+
 - category: (S/S)
   semantics: \E P. P
   surf: do
@@ -135,6 +139,10 @@
 - category: S_[some=true]/(S\NP)
   semantics: \E P. ex(Entity, \x.P(x))
   # semantics: \E P. existential(entity, \x.P(x))
+  surf: who
+
+- category: (S_[some=true]/((S\(S/(S\NP)))/(S\(S/NP))))/(S/(S\NP))
+  semantics: \E P Q. (Q(\Q1.(sig(Entity, \x.(Q1(x)))))(P))
   surf: who
 
 - category: S_[all=true]/(S\NP)

@@ -7,6 +7,7 @@ Inductive Entity : Type := | _John | _Susan | _Lucy.
 Parameter pi : Type.
 Parameter _student : Entity -> Prop.
 Parameter _run : Entity -> Prop.
+Parameter _see : Entity -> Entity -> Prop.
 Axiom John_is_student: _student(_John).
 Axiom Susan_is_student: _student(_Susan).
 Axiom Lucy_is_not_student: (_student(_Lucy) -> False).
@@ -158,6 +159,20 @@ Ltac solve_exh_exists_student :=
     => try(specialize (H _Susan); specialize (H Susan_is_student); exists _Susan; trivial)
   end.
 
+Ltac solve_pair_list_exists :=
+  match goal with
+  | [ H : _see ?y ?z, H1 : _see _ _, H2 : _see _ _ |- {_ | _see ?y _}]
+  => try(exists z; trivial)
+  end.
+
+
+Ltac solve_pair_list :=
+  match goal with 
+  | [ H1  : _see ?e ?f, H : _see ?a ?b, H2 : _see ?c ?d, x : Entity |- {_ : Entity | _see ?y _} ]
+  => induction x
+end.
+
+
 (* Main tactics *)
 
 Ltac nltac_init :=
@@ -193,6 +208,7 @@ Ltac nltac_set :=
           try (induction_entity_intransitive_double_negation; solve_exh_intransitive_double_negation; solve_exh_intransitive_double_negation; solve_exh_intransitive_double_negation);
           try (solve_exh_exists_student);
           try (solve_exh_john_is_student; solve_exh_susan_is_student);
+          try (solve_pair_list; solve_pair_list_exists; solve_pair_list_exists; solve_pair_list_exists);
           try exchange_equality;
           try eqlem_sub.
 
@@ -208,8 +224,6 @@ Ltac nltac_final :=
 Ltac nltac :=
   try solve
     [nltac_set;  nltac_final].
-
-
 
 
 
