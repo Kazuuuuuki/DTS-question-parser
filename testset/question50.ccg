@@ -1,2 +1,2 @@
-(S (S_all (<S_all/<S\NP>> Who) (S\NP run)) (S\S_all ?))
+(S (S_all (<S_all/<S\NP>> Who_all) (S\NP run)) (S\S_all ?))
 (S (<S/<S\NP>> (<S/<S\NP>> John) (<S/<S\NP>>\<S/<S\NP>> (<S/<S\NP>> Lucy) (<<<S/<S\NP>>\<S/<S\NP>>>\<S/<S\NP>>> (<<<S/<S\NP>>\<S/<S\NP>>>\<S/<S\NP>>>/<S/<S\NP>> and) (<S/<S\NP>> Susan)))) (S\NP run))
