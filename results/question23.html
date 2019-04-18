@@ -58,7 +58,7 @@
 </mrow>
 </mfrac>
 </math>
-<p>Conclusion, tree s1_ccg0: Who run ?</p>
+<p>Conclusion, tree s1_ccg0: Who_all run ?</p>
 <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mfrac linethickness='0px'>
   <mrow><mrow><mo>&lt;</mo><mfrac linethickness='3px'>
@@ -66,7 +66,7 @@
   <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
   <mrow><mfrac linethickness='0px'>
   <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>Who</mtext>
+  <mrow><mtext  fontsize='1.0' color='Black'>Who_all</mtext>
 </mrow>
   <mrow><mfrac linethickness='0px'>
   <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
@@ -74,7 +74,7 @@
   <mrow><msub>
   <mi mathvariant='italic' fontsize='1.0' color='Red'>S_  </mi>
   <mrow>
-    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[some=true]  </mi>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
   </mrow>
 </msub>
   <mi mathvariant='italic' fontsize='1.0' color='Red'>/(S\NP)  </mi>
@@ -83,7 +83,7 @@
 </mrow>
 </mfrac>
 </mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>\P.ex(Entity,\x.P(x))</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\P.pi(Entity,\x.(P(x) | -P(x)))</mtext>
 </mrow>
 </mfrac>
 <mfrac linethickness='0px'>
@@ -106,13 +106,13 @@
   <mrow><msub>
   <mi mathvariant='italic' fontsize='1.0' color='Red'>S_  </mi>
   <mrow>
-    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[some=true]  </mi>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
   </mrow>
 </msub>
 </mrow>
 </mfrac>
 </mrow></mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>ex(Entity,\x._run(x))</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>pi(Entity,\x.(_run(x) | -_run(x)))</mtext>
 </mrow>
 </mfrac>
 <mfrac linethickness='0px'>
@@ -125,7 +125,7 @@
   <mrow><msub>
   <mi mathvariant='italic' fontsize='1.0' color='Red'>S\S_  </mi>
   <mrow>
-    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[some=true]  </mi>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
   </mrow>
 </msub>
 </mrow>
@@ -141,7 +141,7 @@
 </mrow>
 </mfrac>
 </mrow></mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>ex(Entity,\x._run(x))</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>pi(Entity,\x.(_run(x) | -_run(x)))</mtext>
 </mrow>
 </mfrac>
 </math>
@@ -149,7 +149,7 @@
 <p>Script piped to coq</p><pre>
 Require Export coqlib.
 
-Theorem t1: (forall x:Entity,(_run x)) -> (ex Entity (fun x => (_run x))). Set Firstorder Depth 1. nltac. Set Firstorder Depth 6. nltac. Qed.
+Theorem t1: (forall x:Entity,(_run x)) -> (forall x:Entity,(or (_run x) (not (_run x)))). nltac. Qed.
 </pre>
     </body>
     </html>

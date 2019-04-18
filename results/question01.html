@@ -58,7 +58,7 @@
 </mrow>
 </mfrac>
 </math>
-<p>Conclusion, tree s1_ccg0: Who run ?</p>
+<p>Conclusion, tree s1_ccg0: Who_some run ?</p>
 <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mfrac linethickness='0px'>
   <mrow><mrow><mo>&lt;</mo><mfrac linethickness='3px'>
@@ -66,7 +66,7 @@
   <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
   <mrow><mfrac linethickness='0px'>
   <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>Who</mtext>
+  <mrow><mtext  fontsize='1.0' color='Black'>Who_some</mtext>
 </mrow>
   <mrow><mfrac linethickness='0px'>
   <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
@@ -148,8 +148,8 @@
 
 <p>Script piped to coq</p><pre>
 Require Export coqlib.
-Parameter _John : Entity.
-Theorem t1: (_run _John) -> (ex Entity (fun x => (_run x))). Set Firstorder Depth 1. nltac. Set Firstorder Depth 6. nltac. Qed.
+
+Theorem t1: (_run _John) -> (ex Entity (fun x => (_run x))). nltac. Qed.
 </pre>
     </body>
     </html>

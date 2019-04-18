@@ -13,9 +13,11 @@
       </script>
     </head>
     <body>
-    <p>Premise 0, tree s0_ccg0: John like Susan</p>
+    <p>Premise 0, tree s0_ccg0: John or Susan run</p>
 <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mfrac linethickness='0px'>
+  <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
+  <mrow><mfrac linethickness='0px'>
   <mrow><mrow><mo>&lt;</mo><mfrac linethickness='3px'>
   <mrow><mfrac linethickness='0px'>
   <mrow><mfrac linethickness='0px'>
@@ -37,18 +39,18 @@
   <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
   <mrow><mfrac linethickness='0px'>
   <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>like</mtext>
+  <mrow><mtext  fontsize='1.0' color='Black'>or</mtext>
 </mrow>
   <mrow><mfrac linethickness='0px'>
   <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
 </mrow>
-  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>(S\(S/(S\NP)))/(S\(S/NP))  </mi>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>((S/(S\NP))\(S/(S\NP)))/(S/(S\NP))  </mi>
 </mrow>
 </mfrac>
 </mrow>
 </mfrac>
 </mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>\Q P.P(\x.Q(\y._like(x,y)))</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\E F Q.(E(Q) | F(Q))</mtext>
 </mrow>
 </mfrac>
 <mfrac linethickness='0px'>
@@ -58,7 +60,7 @@
   <mrow><mfrac linethickness='0px'>
   <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
 </mrow>
-  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\(S/NP)  </mi>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S/(S\NP)  </mi>
 </mrow>
 </mfrac>
 </mrow>
@@ -68,11 +70,35 @@
 </mrow>
 </mfrac>
 </mrow>
-  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\(S/(S\NP))  </mi>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>(S/(S\NP))\(S/(S\NP))  </mi>
 </mrow>
 </mfrac>
 </mrow></mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>\P.P(\x._like(x,_Susan))</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\F Q.(Q(_Susan) | F(Q))</mtext>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S/(S\NP)  </mi>
+</mrow>
+</mfrac>
+</mrow></mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\Q.(Q(_Susan) | Q(_John))</mtext>
+</mrow>
+</mfrac>
+<mfrac linethickness='0px'>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Black'>run</mtext>
+</mrow>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
+</mrow>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\NP  </mi>
+</mrow>
+</mfrac>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\x._run(x)</mtext>
 </mrow>
 </mfrac>
 </mrow>
@@ -80,19 +106,19 @@
 </mrow>
 </mfrac>
 </mrow></mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>_like(_John,_Susan)</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>(_run(_Susan) | _run(_John))</mtext>
 </mrow>
 </mfrac>
 </math>
-<p>Conclusion, tree s1_ccg0: Who like Susan ?</p>
+<p>Conclusion, tree s1_ccg0: Who_some run ?</p>
 <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mfrac linethickness='0px'>
   <mrow><mrow><mo>&lt;</mo><mfrac linethickness='3px'>
   <mrow><mfrac linethickness='0px'>
-  <mrow><mrow><mo>&lt;</mo><mfrac linethickness='3px'>
+  <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
   <mrow><mfrac linethickness='0px'>
   <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>Who</mtext>
+  <mrow><mtext  fontsize='1.0' color='Black'>Who_some</mtext>
 </mrow>
   <mrow><mfrac linethickness='0px'>
   <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
@@ -113,69 +139,19 @@
 </mrow>
 </mfrac>
 <mfrac linethickness='0px'>
-  <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
   <mrow><mfrac linethickness='0px'>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>like</mtext>
+  <mrow><mtext  fontsize='1.0' color='Black'>run</mtext>
 </mrow>
   <mrow><mfrac linethickness='0px'>
   <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
 </mrow>
-  <mrow><msub>
-  <mi mathvariant='italic' fontsize='1.0' color='Red'>(S_  </mi>
-  <mrow>
-    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[some=true]  </mi>
-  </mrow>
-</msub>
-<msub>
-  <mi mathvariant='italic' fontsize='1.0' color='Red'>\(S_  </mi>
-  <mrow>
-    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[some=true]  </mi>
-  </mrow>
-</msub>
-  <mi mathvariant='italic' fontsize='1.0' color='Red'>/(S\NP)))/(S\(S/NP))  </mi>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\NP  </mi>
 </mrow>
 </mfrac>
 </mrow>
 </mfrac>
 </mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>\Q P.P(\x.Q(\y._like(x,y)))</mtext>
-</mrow>
-</mfrac>
-<mfrac linethickness='0px'>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>Susan</mtext>
-</mrow>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
-</mrow>
-  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\(S/NP)  </mi>
-</mrow>
-</mfrac>
-</mrow>
-</mfrac>
-</mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>\P.P(_Susan)</mtext>
-</mrow>
-</mfrac>
-</mrow>
-  <mrow><msub>
-  <mi mathvariant='italic' fontsize='1.0' color='Red'>S_  </mi>
-  <mrow>
-    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[some=true]  </mi>
-  </mrow>
-</msub>
-<msub>
-  <mi mathvariant='italic' fontsize='1.0' color='Red'>\(S_  </mi>
-  <mrow>
-    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[some=true]  </mi>
-  </mrow>
-</msub>
-  <mi mathvariant='italic' fontsize='1.0' color='Red'>/(S\NP))  </mi>
-</mrow>
-</mfrac>
-</mrow></mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>\P.P(\x._like(x,_Susan))</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\x._run(x)</mtext>
 </mrow>
 </mfrac>
 </mrow>
@@ -188,7 +164,7 @@
 </mrow>
 </mfrac>
 </mrow></mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>ex(Entity,\x._like(x,_Susan))</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>ex(Entity,\x._run(x))</mtext>
 </mrow>
 </mfrac>
 <mfrac linethickness='0px'>
@@ -217,17 +193,15 @@
 </mrow>
 </mfrac>
 </mrow></mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>ex(Entity,\x._like(x,_Susan))</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>ex(Entity,\x._run(x))</mtext>
 </mrow>
 </mfrac>
 </math>
 
 <p>Script piped to coq</p><pre>
 Require Export coqlib.
-Parameter _John : Entity.
-Parameter _Susan : Entity.
-Parameter _like : Entity -> (Entity -> Prop).
-Theorem t1: (_like _John _Susan) -> (ex Entity (fun x => (_like x _Susan))). Set Firstorder Depth 1. nltac. Set Firstorder Depth 6. nltac. Qed.
+
+Theorem t1: (or (_run _Susan) (_run _John)) -> (ex Entity (fun x => (_run x))). nltac. Qed.
 </pre>
     </body>
     </html>

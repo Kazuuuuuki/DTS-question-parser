@@ -13,97 +13,10 @@
       </script>
     </head>
     <body>
-    <p>Premise 0, tree s0_ccg0: Who run ?</p>
+    <p>Premise 0, tree s0_ccg0: Only John see Susan</p>
 <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mfrac linethickness='0px'>
   <mrow><mrow><mo>&lt;</mo><mfrac linethickness='3px'>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>Who</mtext>
-</mrow>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
-</mrow>
-  <mrow><msub>
-  <mi mathvariant='italic' fontsize='1.0' color='Red'>S_  </mi>
-  <mrow>
-    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
-  </mrow>
-</msub>
-  <mi mathvariant='italic' fontsize='1.0' color='Red'>/(S\NP)  </mi>
-</mrow>
-</mfrac>
-</mrow>
-</mfrac>
-</mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>\P.pi(Entity,\x.(P(x) | -P(x)))</mtext>
-</mrow>
-</mfrac>
-<mfrac linethickness='0px'>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>run</mtext>
-</mrow>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
-</mrow>
-  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\NP  </mi>
-</mrow>
-</mfrac>
-</mrow>
-</mfrac>
-</mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>\x._run(x)</mtext>
-</mrow>
-</mfrac>
-</mrow>
-  <mrow><msub>
-  <mi mathvariant='italic' fontsize='1.0' color='Red'>S_  </mi>
-  <mrow>
-    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
-  </mrow>
-</msub>
-</mrow>
-</mfrac>
-</mrow></mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>pi(Entity,\x.(_run(x) | -_run(x)))</mtext>
-</mrow>
-</mfrac>
-<mfrac linethickness='0px'>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>?</mtext>
-</mrow>
-  <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
-</mrow>
-  <mrow><msub>
-  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\S_  </mi>
-  <mrow>
-    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
-  </mrow>
-</msub>
-</mrow>
-</mfrac>
-</mrow>
-</mfrac>
-</mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>\S.S</mtext>
-</mrow>
-</mfrac>
-</mrow>
-  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S  </mi>
-</mrow>
-</mfrac>
-</mrow></mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>pi(Entity,\x.(_run(x) | -_run(x)))</mtext>
-</mrow>
-</mfrac>
-</math>
-<p>Conclusion, tree s1_ccg0: Only John run</p>
-<math xmlns='http://www.w3.org/1998/Math/MathML'>
-<mfrac linethickness='0px'>
-  <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
   <mrow><mfrac linethickness='0px'>
   <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
   <mrow><mfrac linethickness='0px'>
@@ -147,19 +60,45 @@
 </mrow>
 </mfrac>
 <mfrac linethickness='0px'>
+  <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
   <mrow><mfrac linethickness='0px'>
-  <mrow><mtext  fontsize='1.0' color='Black'>run</mtext>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Black'>see</mtext>
 </mrow>
   <mrow><mfrac linethickness='0px'>
   <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
 </mrow>
-  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\NP  </mi>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>(S\(S/(S\NP)))/(S\(S/NP))  </mi>
 </mrow>
 </mfrac>
 </mrow>
 </mfrac>
 </mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>\x._run(x)</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\Q P.P(\x.Q(\y._see(x,y)))</mtext>
+</mrow>
+</mfrac>
+<mfrac linethickness='0px'>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Black'>Susan</mtext>
+</mrow>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
+</mrow>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\(S/NP)  </mi>
+</mrow>
+</mfrac>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\P.P(_Susan)</mtext>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\(S/(S\NP))  </mi>
+</mrow>
+</mfrac>
+</mrow></mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\P.P(\x._see(x,_Susan))</mtext>
 </mrow>
 </mfrac>
 </mrow>
@@ -167,22 +106,152 @@
 </mrow>
 </mfrac>
 </mrow></mrow>
-  <mrow><mtext  fontsize='1.0' color='Blue'>(pi(Entity,\y.(_run(y) -&gt; (_John = y))) &amp; _run(_John))</mtext>
+  <mrow><mtext  fontsize='1.0' color='Blue'>(pi(Entity,\y.(_see(y,_Susan) -&gt; (_John = y))) &amp; _see(_John,_Susan))</mtext>
+</mrow>
+</mfrac>
+</math>
+<p>Conclusion, tree s1_ccg0: Who_all see Susan ?</p>
+<math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mfrac linethickness='0px'>
+  <mrow><mrow><mo>&lt;</mo><mfrac linethickness='3px'>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mrow><mo>&lt;</mo><mfrac linethickness='3px'>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Black'>Who_all</mtext>
+</mrow>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
+</mrow>
+  <mrow><msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>S_  </mi>
+  <mrow>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
+  </mrow>
+</msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>/(S\NP)  </mi>
+</mrow>
+</mfrac>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\P.pi(Entity,\x.(P(x) | -P(x)))</mtext>
+</mrow>
+</mfrac>
+<mfrac linethickness='0px'>
+  <mrow><mrow><mo>&gt;</mo><mfrac linethickness='3px'>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Black'>see</mtext>
+</mrow>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
+</mrow>
+  <mrow><msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>(S_  </mi>
+  <mrow>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
+  </mrow>
+</msub>
+<msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>\(S_  </mi>
+  <mrow>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
+  </mrow>
+</msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>/(S\NP)))/(S\(S/NP))  </mi>
+</mrow>
+</mfrac>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\Q P.P(\x.Q(\y._see(x,y)))</mtext>
+</mrow>
+</mfrac>
+<mfrac linethickness='0px'>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Black'>Susan</mtext>
+</mrow>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
+</mrow>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\(S/NP)  </mi>
+</mrow>
+</mfrac>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\P.P(_Susan)</mtext>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow><msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>S_  </mi>
+  <mrow>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
+  </mrow>
+</msub>
+<msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>\(S_  </mi>
+  <mrow>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
+  </mrow>
+</msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>/(S\NP))  </mi>
+</mrow>
+</mfrac>
+</mrow></mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\P.P(\x._see(x,_Susan))</mtext>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow><msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>S_  </mi>
+  <mrow>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
+  </mrow>
+</msub>
+</mrow>
+</mfrac>
+</mrow></mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>pi(Entity,\x.(_see(x,_Susan) | -_see(x,_Susan)))</mtext>
+</mrow>
+</mfrac>
+<mfrac linethickness='0px'>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Black'>?</mtext>
+</mrow>
+  <mrow><mfrac linethickness='0px'>
+  <mrow><mtext  fontsize='1.0' color='Green'>*</mtext>
+</mrow>
+  <mrow><msub>
+  <mi mathvariant='italic' fontsize='1.0' color='Red'>S\S_  </mi>
+  <mrow>
+    <mi mathvariant='italic' fontsize='0.8' color='Purple'>[all=true]  </mi>
+  </mrow>
+</msub>
+</mrow>
+</mfrac>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>\S.S</mtext>
+</mrow>
+</mfrac>
+</mrow>
+  <mrow>  <mi mathvariant='italic' fontsize='1.0' color='Red'>S  </mi>
+</mrow>
+</mfrac>
+</mrow></mrow>
+  <mrow><mtext  fontsize='1.0' color='Blue'>pi(Entity,\x.(_see(x,_Susan) | -_see(x,_Susan)))</mtext>
 </mrow>
 </mfrac>
 </math>
 
 <p>Script piped to coq</p><pre>
 Require Export coqlib.
-Parameter _John : Entity.
-Parameter pi_e4 : Entity -> ((Entity -> Prop) -> Prop).
-Theorem t1: (pi_e4 Entity (fun x => (or (_run x) (not (_run x))))) -> (and (pi_e4 Entity (fun y => ((_run y) -> (_John = y)))) (_run _John)). Set Firstorder Depth 1. nltac. Set Firstorder Depth 6. nltac. Qed.
-</pre>
-<pre>
-Require Export coqlib.
-Parameter _John : Entity.
-Parameter pi_e4 : Entity -> ((Entity -> Prop) -> Prop).
-Theorem t1: (pi_e4 Entity (fun x => (or (_run x) (not (_run x))))) -> (not (and (pi_e4 Entity (fun y => ((_run y) -> (_John = y)))) (_run _John))). Set Firstorder Depth 1. nltac. Set Firstorder Depth 6. nltac. Qed.
+
+Theorem t1: (and (forall y:Entity,((_see y _Susan) -> (_John = y))) (_see _John _Susan)) -> (forall x:Entity,(or (_see x _Susan) (not (_see x _Susan)))). nltac. Qed.
 </pre>
     </body>
     </html>
