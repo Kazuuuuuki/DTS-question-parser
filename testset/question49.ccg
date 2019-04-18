@@ -1,2 +1,2 @@
-(S (S_all (<S_all/<S\NP>> Who_all) (S\NP run)) (S\S_all ?))
-(S (<S/<S\NP>> Nobody) (S\NP run))
+(S (S (<S/<S\NP>> John) (<S\<S/<S\NP>>> (<S\<S/<S\NP>>>/<S\<S/NP>> see) (<S\<S/NP>> Susan))) (S\S (<S\S>/S and) (S (<S/<S\NP>> (<S/<S\NP>> Lucy) (<S/<S\NP>>\<S/<S\NP>> (<<S/<S\NP>>\<S/<S\NP>>>/<S/<S\NP>> and) (<S/<S\NP>> Susan))) (<S\<S/<S\NP>>> (<S\<S/<S\NP>>>/<S\<S/NP>> see) (<S\<S/NP>> John)))))
+(S (S_some (<S_some/<S\<S/<S\NP>>>/<S\<S/NP>>> (<<S_some/<S\<S/<S\NP>>>/<S\<S/NP>>>/<S/<S\NP>>> (<<S_some/<S\<S/<S\NP>>>/<S\<S/NP>>>/<S/<S\NP>>> Who_some) (<<<S_some/<S\<S/<S\NP>>>/<S\<S/NP>>>/<S/<S\NP>>>\<<S_some/<S\<S/<S\NP>>>/<S\<S/NP>>>/<S/<S\NP>>>> did)) (<S/<S\NP>> everyone)) (<S\<S/<S\NP>>>/<S\<S/NP>> see)) (S\S_some ?))

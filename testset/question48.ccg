@@ -1,2 +1,2 @@
-(S (<S/<S\NP>> Nobody) (S\NP run))
-(S (S_all (<S_all/<S\NP>> Who_all) (S\NP run)) (S\S_all ?))
+(S (S (<S/<S\NP>> John) (S\NP (<S\NP>/<S\NP> is) (S\NP tall))) (S\S (<S\S>/S and) (S (<S/<S\NP>> John) (S\NP (<S\NP>/<S\NP> is) (S\NP (<S\NP>/<S\NP> not) (S\NP short))))))
+(S (S_or (S_or/S_or Is) (S_or (<S_or/<S_or\NP>> John) (S_or\NP (<S\NP> tall) (<S_or\NP>\<S\NP> (<<S_or\NP>\<S\NP>>/<S\NP> or) (S\NP short))))) (S\S_or ?))
