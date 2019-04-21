@@ -7,7 +7,7 @@ ccg=$1
 
 home=$HOME
 c2l_dir="${home}/ccg2lambda"
-semantics="semantic_lexicon_for_question2.yaml"
+semantics="semantic_lexicon_for_question.yaml"
 file=${ccg##*/}
 jigg=${file/.ccg/.xml}
 

@@ -139,16 +139,16 @@
 - category: S_[some=true]/(S\NP)
   semantics: \E P. ex(Entity, \x.P(x))
   # semantics: \E P. existential(entity, \x.P(x))
-  surf: who
+  surf: who_some
 
 - category: (S_[some=true]/((S\(S/(S\NP)))/(S\(S/NP))))/(S/(S\NP))
   semantics: \E P Q. (Q(\Q1.(sig(Entity, \x.(Q1(x)))))(P))
-  surf: who
+  surf: who_some
 
 - category: S_[all=true]/(S\NP)
   semantics: \E P. pi(Entity, \x.(P(x) | - P(x)))
   # semantics: \E P. pi(entity, (P(x) | - P(x)))
-  surf: who
+  surf: who_all
 
 - category: (S/(S\NP))/(S/(S\NP))
   semantics: \E P Q. (pi(Entity, \y.((Q(y) -> (P(\x.x) = y)))) & P(Q))
@@ -158,13 +158,9 @@
   semantics: \E x. E(x)
 
 # question
-#John came or didn't come.と
-#Did John come or din't come?の意味を分けるべきか？
-#orの意味と合わせるなら、疑問文の方にalternativeの意味を追加すれば良い？この場合は二重否定除去になる。
-#再考の余地あり
 
 - category: S\S
-  semantics: \E S. ((S | - S) & (S -> --S) & (-S -> -S))
+  semantics: \E S. (S | - S)
   surf: "?"
 
 - category: S\S_[some=true]
