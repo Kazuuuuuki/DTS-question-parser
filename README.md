@@ -4,7 +4,7 @@
 
 - python >= 3.6.5
 - [ccg2lambda](https://github.com/mynlp/ccg2lambda)
-- coq == coq8.5pl3
+- coq = coq8.5pl3
    
 
 ## CCG木を意味表示に変換する
