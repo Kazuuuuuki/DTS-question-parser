@@ -2,10 +2,9 @@
 
 ### Requirement
 
-- python 3.6.5以上
+- python >= 3.6.5
 - [ccg2lambda](https://github.com/mynlp/ccg2lambda)
-    - [インストールの仕方](http://abelard.flet.keio.ac.jp/person/minesima/c2l/doc.html)
-    - [テンプレートの書き方](http://abelard.flet.keio.ac.jp/person/minesima/c2l/semantics.html)
+   
 
 ## CCG木を意味表示に変換する
 
