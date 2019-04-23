@@ -9,7 +9,7 @@
 
 ## Usage
 The testset is in ([testset](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/testset)).  
-The result of parsing and inferencing the testset with Coq is in ([result](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/results)).
+The result of parsing and inferencing the testset with Coq is in ([result](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/results)).  
 The semantic template and coqfile which we used in our parser are () and () respectively.
 
 
