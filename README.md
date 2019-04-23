@@ -10,9 +10,7 @@
 ## Usage
 The testset is in ([testset](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/testset)).  
 The result of parsing and inferencing the testset with coq is in ([result](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/results)).
-```
-./parsing.sh <ccgファイル>
-```
+
 
 
 例：
