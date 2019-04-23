@@ -7,8 +7,8 @@
 - coq = coq8.5pl3
    
 
-## CCG木を意味表示に変換する
-
+## Usage
+The testset is in here([testset](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/testset)).
 ```
 ./parsing.sh <ccgファイル>
 ```
