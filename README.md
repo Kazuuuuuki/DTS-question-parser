@@ -8,7 +8,7 @@
    
 
 ## Usage
-The testset is in here([testset](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/testset)).
+The testset is in here ([testset](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/testset)).
 ```
 ./parsing.sh <ccgファイル>
 ```
