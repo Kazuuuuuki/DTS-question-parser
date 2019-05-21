@@ -11,17 +11,20 @@
 You need to install and set up [ccg2lambda](https://github.com/mynlp/ccg2lambda) in your home directory.
 Please check coq's version in your environment. We test our code in Coq8.5pl3. 
 
-## Usage
+### Setting
 The testset is in ([testset](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/testset)).  
 The result of parsing and inferencing the testset with Coq is in ([result](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/results)).  
 The semantic template and coqfile which we used in our parser are ([semantic_template](https://github.com/Kazuuuuuki/DTS-question-parser/blob/master/semantic_lexicon_for_question.yaml)) and ([coq_file](https://github.com/Kazuuuuuki/DTS-question-parser/blob/master/coqlib.v)) respectively.
 
 
-例：
+### Usage
+You can parse your input data: 
 
 ```
 ./parsing.sh sentences/example1.ccg
 ```
+
+
 
 CCGの木と論理式は、`results/example1.html` で見ることができる。
 
