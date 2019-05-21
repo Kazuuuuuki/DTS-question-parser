@@ -90,6 +90,7 @@ exists x. (F(x) & G(x))
 ```
 と書かないといけない。
 
+[](
 ## 中間ファイルとエラーメッセージ
 
 `./parsing.sh sentences/example1.ccg` を実行すると、 `results/`に以下のような順序で中間ファイルが生成される。
@@ -111,3 +112,4 @@ File does not exist: results/example1.sem.xml
 ...
 ```
 というエラーは、論理式を生成する example1.sem.xml のところで失敗したことを意味していて、テンプレートに何か問題があるという予想が立てられる。
+)
