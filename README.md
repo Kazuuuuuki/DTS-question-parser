@@ -88,5 +88,5 @@ So, you have to write:
 exists x. (F(x) & G(x)) 
 ```
 
-
+### Citation
 
