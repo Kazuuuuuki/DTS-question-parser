@@ -35,13 +35,15 @@ You can parse all inputs in `testset`:
 ## Input
 - testcase `testset/question01.ccg`  etc.
 - it's answer `testset/question01.answer` etc.
+
 You can see the all results in `results/main.html`.
+
 The code of proof automation is in `coqlib.v`.
 
 
 ## Notation of CCG Tree
 
-`sentences/example1.ccg` を参考にする。
+Please consider `sentences/example1.ccg` as example.
 
 ```
 (S (NP John) (S\NP runs))
@@ -51,10 +53,11 @@ The code of proof automation is in `coqlib.v`.
 (S (S (NP John) (S\NP runs)) (S\S .))
 ```
 
-### 注意
+## Remark
 
-統語範疇のかっこは `<...>` を使う。例えば、 `(S\NP)/(S\NP)` は
-`<S\NP>/<S\NP>` と書く。
+`<...>` serves as ().
+
+For example, `<S\NP>/<S\NP>` means `(S\NP)/(S\NP)`.
 
 ## テンプレートの書き方
 
