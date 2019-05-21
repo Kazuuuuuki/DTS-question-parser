@@ -7,6 +7,10 @@
 - coq = coq8.5pl3
    
 
+### Installation
+You need to install and set up [ccg2lambda](https://github.com/mynlp/ccg2lambda) in your home directory.
+Please check coq's version in your environment. We test our code in Coq8.5pl3. 
+
 ## Usage
 The testset is in ([testset](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/testset)).  
 The result of parsing and inferencing the testset with Coq is in ([result](https://github.com/Kazuuuuuki/DTS-question-parser/tree/master/results)).  
