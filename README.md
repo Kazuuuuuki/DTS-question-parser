@@ -32,13 +32,14 @@ You can parse all inputs in `testset`:
 ```
 ./run_test.sh
 ```
+## Input
+- testcase `testset/question01.ccg`  etc.
+- it's answer `testset/question01.answer` etc.
+You can see the all results in `results/main.html`.
+The code of proof automation is in `coqlib.v`.
 
-- 問題のファイル `testset/question01.ccg`  etc.
-- 答えのファイル `testset/question01.answer` etc.
-- `results/main.html` に結果の一覧が表示される。
-- `coqlib.v` にCoqのタクティクスを書く。 `nltac` が実行されるタクティクス名。
 
-## CCG木の書き方
+## Notation of CCG Tree
 
 `sentences/example1.ccg` を参考にする。
 
