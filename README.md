@@ -21,14 +21,13 @@ The semantic template and coqfile which we used in our parser are ([semantic_tem
 You can parse your input data: 
 
 ```
-./parsing.sh sentences/example1.ccg
+./parsing.sh testset/question01.ccg
 ```
 
+You can see the result of parsing in `results/question01.html`.
 
-
-CCGの木と論理式は、`results/example1.html` で見ることができる。
-
-## テストセットによる評価
+### Evaluation
+You can parse all inputs in `testset`:
 
 ```
 ./run_test.sh
