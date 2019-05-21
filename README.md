@@ -53,63 +53,40 @@ Please consider `sentences/example1.ccg` as example.
 (S (S (NP John) (S\NP runs)) (S\S .))
 ```
 
-## Remark
+## Remark for input.
 
 `<...>` serves as ().
 
 For example, `<S\NP>/<S\NP>` means `(S\NP)/(S\NP)`.
 
-## テンプレートの書き方
+## Rules of semantic template
 
-- テンプレートは、 `semantic_lexicon_for_question.yaml`
+- The template we use is `semantic_lexicon_for_question.yaml`
 
-- テンプレート・公理では、以下の論理記号を使う。
-
-```
-否定            -A
-連言            A & B
-選言            A | B
-条件法          A -> B
-Pi型           pi(A, \x.B)
-Sigma型        sig(A, \x.B)
-Existential型  ex(A, \x.B)
-pi_1 u         projT1(u)
-pi_2 u         projT2(u)
-等号           x = y
-ラムダ         \x. A
-```
-
-#### カッコについての注意!!
+- Notation
 
 ```
-exists x. F(x) & G(x) は (exists x. F(x)) & G(x) 
+negation               -A
+conjunction          A & B
+disjunction          A | B
+implication          A -> B
+Pi-type           pi(A, \x.B)
+Sigma-type        sig(A, \x.B)
+Existential-type  ex(A, \x.B)
+pi_1 u            projT1(u)
+pi_2 u            projT2(u)
+equal                x = y
+lambda               \x. A
 ```
-と読まれてしまうので
+
+### Remarks
+```
+exists x. F(x) & G(x) is read as (exists x. F(x)) & G(x) 
+```
+So, you have to write:
 ```
 exists x. (F(x) & G(x)) 
 ```
-と書かないといけない。
 
-[](
-## 中間ファイルとエラーメッセージ
 
-`./parsing.sh sentences/example1.ccg` を実行すると、 `results/`に以下のような順序で中間ファイルが生成される。
 
-```
-example1.ccg（インプットのCCGファイル）
-↓
-example1.xml（example1.ccgをxmlに変換したもの）
-↓
-example1.sem.xml（example1.xmlから論理式を生成したもの）
-example1.sem.err（テンプレートの不備などにより論理式生成に失敗したときにこのファイルにエラーメッセージが出力される。うまく言っていれば空。）
-↓
-example1.html（CCG木を論理式付きで可視化したもの）
-```
-
-例えば、
-```
-File does not exist: results/example1.sem.xml
-...
-```
-というエラーは、論理式を生成する example1.sem.xml のところで失敗したことを意味していて、テンプレートに何か問題があるという予想が立てられる。
-)
